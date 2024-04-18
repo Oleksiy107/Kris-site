@@ -1,0 +1,42 @@
+.HeroKidswWrap {
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  padding: 8vw 4vw;
+  &__img {
+    width: 70%;
+  }
+  &__sectionAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+  }
+  &__subText {
+    text-align: center;
+    font-size: 1.5vw;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .HeroKidswWrap {
+    &__subText {
+      font-size: 2.5vw;
+    }
+  }
+}
+@media screen and (max-width: 625px) {
+  .HeroKidswWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8vw;
+    &__subText {
+      width: 90%;
+      font-size: $MobileSizeForText;
+    }
+    &__img {
+      width: 90%;
+      height: auto;
+    }
+  }
+}

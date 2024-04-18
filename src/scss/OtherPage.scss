@@ -1,0 +1,84 @@
+$colorText: white;
+$size: 2vw;
+.otherPage {
+  padding: 4vw 6vw;
+  display: flex;
+  flex-direction: column;
+  &__subText {
+    text-align: center;
+    font-size: 1vw;
+    color: $colorText;
+  }
+  &__title {
+    text-align: center;
+    padding: 1vw 0;
+    font-size: $size;
+  }
+  &__link {
+    padding: 0 0.1vw;
+  }
+  &__link:hover {
+    opacity: 1;
+    transition: 1s all;
+    padding: 0 0.3vw;
+    border-bottom: 2px solid #fff;
+  }
+  &__boxImg {
+    padding: 1vw 0;
+    gap: 2vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__textBlock {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.5vw;
+  }
+  &__section {
+    font-size: 1.2vw;
+    padding: 0.5vw 0;
+  }
+  &__img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .otherPage {
+    &__section {
+      font-size: $size;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .otherPage {
+    &__title {
+      font-size: $size;
+    }
+    &__section {
+      font-size: $size;
+    }
+    &__subText {
+      font-size: $size;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .otherPage {
+    &__title {
+      font-size: 4vw;
+    }
+    &__boxImg {
+      gap: 8vw;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__section {
+      font-size: $MobileSizeForText;
+    }
+    &__subText {
+      padding: 2vw 0;
+      font-size: $MobileSizeForText;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+$colorWhiteLink: #fff;
+$size: 2.5vw;
+$alignItems: center;
+.footerWrap {
+  border-top: 1px solid $colorWhiteLink;
+  background-color: #000;
+  padding: 2vw;
+  display: flex;
+  padding: 2vw 6vw;
+  gap: 4vw;
+  align-items: flex-start;
+  justify-content: flex-start;
+  &__firstWrap {
+    display: flex;
+
+    flex-direction: column;
+  }
+  &__firstWrap {
+    &--correctStyle {
+      display: none;
+    }
+  }
+
+  &__titles {
+    font-size: 1.2vw;
+    padding: 2vw 0;
+  }
+  &__linkHelp {
+    font-size: 1.5vw;
+    color: #000;
+  }
+  &__imgMessage {
+    &--FacebookMessageImg {
+      width: 40px;
+    }
+    &--InstagramMessageImg {
+      width: 30px;
+    }
+    width: 40px;
+  }
+  &__sectionImg {
+    display: flex;
+    gap: 4vw;
+    justify-content: flex-start;
+    align-items: $alignItems;
+  }
+  &__HelpBlock {
+    display: flex;
+
+    flex-direction: column;
+  }
+  &__messageLink {
+    display: flex;
+    flex-direction: column;
+  }
+  &__linkHelp:hover {
+    opacity: 1;
+    width: 40%;
+    transition: 1s all;
+    padding: 0 0.3vw;
+    border-bottom: 2px solid #fff;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footerWrap {
+    &__titles {
+      font-size: $size;
+    }
+    &__linkHelp {
+      font-size: $size;
+    }
+  }
+}
+@media screen and (max-width: 505px) {
+  .footerWrap {
+    padding: 8vw 4vw;
+    display: flex;
+    align-items: $alignItems;
+    flex-direction: column;
+    gap: 6vw;
+    &__titles {
+      text-align: center;
+      font-size: $MobileSizeForText;
+    }
+    &__linkHelp {
+      font-size: $MobileSizeForText;
+    }
+    &__firstWrap {
+      align-items: $alignItems;
+    }
+    &__HelpBlock {
+      align-items: $alignItems;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__messageLink {
+      gap: 4vw;
+    }
+    &__sectionImg {
+      justify-content: center;
+    }
+    &__imgMessage {
+      &--FacebookMessageImg {
+        width: 35px;
+      }
+      &--InstagramMessageImg {
+        width: 35px;
+      }
+      width: 40px;
+    }
+  }
+}

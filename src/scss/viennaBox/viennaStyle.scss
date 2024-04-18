@@ -1,0 +1,73 @@
+$whiteColor: #fff;
+@mixin flexStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.PeopleViennaBox {
+  @include flexStyle();
+  gap: 2vw;
+  padding: 4vw 12vw;
+  &__link {
+    border-bottom: 2px solid $whiteColor;
+  }
+  &__imgPhoto {
+    width: 50%;
+  }
+  &__imgText {
+    text-align: center;
+  }
+  &__title {
+    text-align: start;
+    font-size: 1.5vw;
+    &--Topic {
+      text-align: center;
+    }
+  }
+  &__text {
+    font-size: 1.5vw;
+  }
+  &__itemWrap {
+    &--imgWrap {
+      align-items: center;
+    }
+    @include flexStyle();
+    align-items: flex-start;
+    gap: 1vw;
+  }
+  &__text {
+    padding: 2vw 0;
+    text-align: start;
+  }
+
+  &__imgText {
+    font-size: 1.5vw;
+    padding: 0 0 4vw 0;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .PeopleViennaBox {
+    padding: 8vw 6vw;
+    &__title {
+      font-size: 2.5vw;
+    }
+    &__text {
+      font-size: 2.5vw;
+    }
+
+    &__title {
+      padding: 4vw 0;
+    }
+  }
+}
+@media screen and (max-width: 625px) {
+  .PeopleViennaBox {
+    &__title {
+      font-size: 3vw;
+    }
+    &__text {
+      font-size: 3vw;
+    }
+    padding: 8vw 12vw;
+  }
+}

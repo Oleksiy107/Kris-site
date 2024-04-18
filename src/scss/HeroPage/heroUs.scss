@@ -1,0 +1,219 @@
+@mixin flexHero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+}
+.SecondWrap {
+  padding: 4vw 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__WrapToImg {
+    padding: 6vw 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__subText {
+    padding: 2vw 0;
+    width: 80%;
+    font-size: 1.5vw;
+  }
+  &__sectionImg {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__img {
+    width: 30vw;
+    height: 35vw;
+  }
+  &__imgs {
+    width: 70vw;
+    height: 40vw;
+  }
+}
+.wrapAboutHero {
+  padding: 4vw 8vw;
+  display: grid;
+  gap: 6vw;
+  grid-template-columns: repeat(3, 1fr);
+  &__img {
+    width: 25vw;
+  }
+  &__subText {
+    text-align: center;
+    padding: 2vw;
+    font-size: 1.4vw;
+    width: 100%;
+  }
+  &__sectionImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.NavigateToItemPage {
+  &__itemList {
+    font-size: 2vw;
+  }
+}
+.NavigateToItemPage > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4vw;
+  justify-content: center;
+  gap: 4vw;
+}
+.HeroWrap {
+  &__img1 {
+    width: 100%;
+    height: 30vw;
+  }
+  &__subText {
+    padding: 1vw 0;
+
+    font-size: 1.3vw;
+  }
+  &__titleWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__wrapHero {
+    display: grid;
+    padding: 4vw 6vw;
+    gap: 2vw;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__itemSection {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .HeroWrap {
+    &__subText {
+      padding: 1vw 0;
+
+      font-size: 1.7vw;
+    }
+  }
+  .wrapAboutHero {
+    &__subText {
+      padding: 3vw;
+      font-size: 1.5vw;
+      width: 100%;
+    }
+  }
+  .SecondWrap {
+    &__subText {
+      font-size: 1.5vw;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .NavigateToItemPage {
+    &__itemList {
+      font-size: 3vw;
+    }
+  }
+  .SecondWrap {
+    &__subText {
+      padding: 4vw 0;
+      font-size: 2.5vw;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .HeroWrap {
+    &__wrapHero {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__itemSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &__subText {
+      width: 70%;
+    }
+    &__img1 {
+      text-align: center;
+      width: 70%;
+      height: 60vw;
+    }
+    &__subText {
+      padding: 2vw 0;
+      font-size: 4vw;
+    }
+  }
+
+  .SecondWrap {
+    &__WrapToImg {
+      gap: 4vw;
+      padding: 4vw 8vw;
+    }
+
+    &__img {
+      width: 35vw;
+      height: 40vw;
+    }
+    &__imgs {
+      width: 70vw;
+      height: 40vw;
+    }
+  }
+  .wrapAboutHero {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8vw;
+
+    &__subText {
+      padding: 3vw;
+      font-size: 3.5vw;
+      width: 85%;
+    }
+    &__sectionImg {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__img {
+      width: 40vw;
+      height: 40vw;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .NavigateToItemPage {
+    &__itemList {
+      font-size: 4vw;
+    }
+  }
+
+  .wrapAboutHero {
+    grid-template-columns: repeat(1, 1fr);
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+    &__subText {
+      padding: 4vw 0;
+      font-size: 4vw;
+      width: 80%;
+    }
+    &__sectionImg {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .SecondWrap {
+    &__subText {
+      font-size: 4vw;
+    }
+  }
+}
